@@ -50,7 +50,10 @@
                         <li>Determination</li>
                         <li>Commitment</li>
                         <li>Mission & Focus</li>
-                    </ul> <a class="btn btn-theme" href="#"><span>Learn More</span></a>
+                    </ul>
+                    <a class="btn btn-theme" href="{{ route('about.index') }}">
+                        <span>Learn More</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -121,8 +124,7 @@
                     }
                 </style>
                 <div class="col-lg-2 col-md-2 col-sm-12"
-                    style="padding-top: 12px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; width: 100px;float: left;
-        margin: 8px; ">
+                    style="padding-top: 12px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; width: 100px;float: left; margin: 8px; ">
                     <center>
                         <img class="img-css" src="{{ asset('assets/images/feature/jp.png') }}" alt="">
                     </center>
@@ -131,8 +133,7 @@
                     </p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-12"
-                    style="padding-top: 12px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; width: 100px;float: left;
-        margin: 8px; ">
+                    style="padding-top: 12px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; width: 100px;float: left; margin: 8px; ">
                     <center>
                         <img class="img-css" src="{{ asset('assets/images/feature/t.png') }}" alt="">
                     </center>
@@ -171,8 +172,7 @@
                     </p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-12"
-                    style="padding-top: 12px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; width: 100px;float: left;
-        margin: 8px; ">
+                    style="padding-top: 12px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; width: 100px;float: left; margin: 8px; ">
                     <center>
                         <img class="img-css" src="{{ asset('assets/images/feature/kuwait.png') }}" alt="">
                     </center>
@@ -355,6 +355,4 @@
             </div>
         </div>
     </section>
-
-
 @endsection

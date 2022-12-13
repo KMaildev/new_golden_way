@@ -38,10 +38,6 @@
                                             <li>
                                                 <a href="{{ route('team.index') }}">Our Teams</a>
                                             </li>
-                                            <li>
-                                                <a href="">Our Partners</a>
-                                            </li>
-                                            </a>
                                         </ul>
                                     </div>
                                 </li>
