@@ -257,101 +257,61 @@
                 <div class="col-lg-8 col-md-12">
                     <div class="section-title">
                         <h6>Our Activities</h6>
-                        <h2 class="title">Read our latest news</h2>
-                        {{-- <p class="mb-0 text-black">Deos et accusamus et iusto odio dignissimos qui blanditiis praesentium voluptatum dele corrupti quos dolores et quas molestias.</p> --}}
+                        <h2 class="title">
+                            WE'VE DONE LOTS OF WORK, LET’S CHECK SOME ACTIVITIES HERE.
+                        </h2>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-12">
-                    <div class="post">
-                        <div class="post-image">
-                            <img class="img-fluid h-100 w-100" src="{{ asset('assets/images/blog/01.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="post-desc">
-                            <div class="post-date">23 <span>November 2018</span>
-                            </div>
-                            <div class="post-title">
-
-                            </div>
-
-                            <div class="post-author">
-                                <div class="post-author-img">
-                                    <img class="img-fluid" src="{{ asset('assets/images/thumbnail/01.png') }}"
-                                        alt="">
-                                </div> <span>NGW</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-12">
-                    <div class="post">
-                        <div class="post-image">
-                            <img class="img-fluid h-100 w-100" src="{{ asset('assets/images/blog/01.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="post-desc">
-                            <div class="post-date">23 <span>November 2018</span>
-                            </div>
-                            <div class="post-title">
-
-                            </div>
-
-                            <div class="post-author">
-                                <div class="post-author-img">
-                                    <img class="img-fluid" src="{{ asset('assets/images/thumbnail/01.png') }}"
-                                        alt="">
-                                </div> <span>NGW</span>
-                            </div>
+                @foreach ($activities as $activitie)
+                    <div class="col-lg-12 col-md-12 col-sm-12 p-1 py-4">
+                        <div class="heading-line-bottom">
+                            @if (session('key') == 'jp')
+                                <h4 class="heading-title">
+                                    {{ $activitie->title_jp ?? '' }}
+                                </h4>
+                                <p>
+                                    {{ $activitie->description_jp ?? '' }}
+                                </p>
+                            @else
+                                <h4 class="heading-title">
+                                    {{ $activitie->title ?? '' }}
+                                </h4>
+                                <p>
+                                    {{ $activitie->description ?? '' }}
+                                </p>
+                            @endif
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-12">
-                    <div class="post">
-                        <div class="post-image">
-                            <img class="img-fluid h-100 w-100" src="{{ asset('assets/images/blog/01.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="post-desc">
-                            <div class="post-date">23 <span>November 2018</span>
-                            </div>
-                            <div class="post-title">
+                    @php
+                        $values = explode(',', $activitie->photo);
+                    @endphp
+                    @foreach ($values as $photo)
+                        <div class="col-lg-3 col-md-12">
+                            <div class="post">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="{{ $photo }}" alt="New Golden Way Agency"
+                                        style="width: 100%; height: 260px; background-size: center; object-fit: cover;">
+                                </div>
+                                <div class="post-desc">
+                                    <div class="post-date">23 <span>November 2018</span>
+                                    </div>
+                                    <div class="post-title">
 
-                            </div>
+                                    </div>
 
-                            <div class="post-author">
-                                <div class="post-author-img">
-                                    <img class="img-fluid" src="{{ asset('assets/images/thumbnail/01.png') }}"
-                                        alt="">
-                                </div> <span>NGW</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-12">
-                    <div class="post">
-                        <div class="post-image">
-                            <img class="img-fluid h-100 w-100" src="{{ asset('assets/images/blog/01.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="post-desc">
-                            <div class="post-date">23 <span>November 2018</span>
-                            </div>
-                            <div class="post-title">
-
-                            </div>
-
-                            <div class="post-author">
-                                <div class="post-author-img">
-                                    <img class="img-fluid" src="{{ asset('assets/images/thumbnail/01.png') }}"
-                                        alt="">
-                                </div> <span>NGW</span>
+                                    <div class="post-author">
+                                        <div class="post-author-img" style="background-color: white;">
+                                            <img class="img-fluid" src="{{ asset('data/logo.png') }}" alt="">
+                                        </div>
+                                        <span>NGW</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
+                    @endforeach
+                @endforeach
             </div>
         </div>
     </section>

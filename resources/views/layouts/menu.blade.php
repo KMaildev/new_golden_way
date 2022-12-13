@@ -5,8 +5,7 @@
                 <div class="col">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand logo" href="{{ route('welcome') }}">
-                            <img id="logo-img" class="img-fluid" src="{{ asset('assets/images/logo.png') }}"
-                                alt="">
+                            <img id="logo-img" class="img-fluid" src="{{ asset('data/logo.png') }}" alt="">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -33,7 +32,7 @@
                                                 <a href="{{ route('about.index') }}">Our Company</a>
                                             </li>
                                             <li>
-                                                <a href="">Our Organization Chart</a>
+                                                <a href="{{ route('organization.index') }}">Our Organization Chart</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('team.index') }}">Our Teams</a>
@@ -89,22 +88,23 @@
                                         Contact Us
                                     </a>
                                 </li>
+
+                                <li class="">
+                                    <a href="{{ route('set_eng') }}" class="nav-link">
+                                        <img src="{{ asset('data/us.gif') }}" style="width: 40px;">
+                                    </a>
+                                </li>
+
+                                <li class="">
+                                    <a href="{{ route('set_jp') }}" class="nav-link">
+                                        <img src="{{ asset('data/jp.jpeg') }}" style="width: 40px;">
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
-                        <a href="{{ route('set_eng') }}" class="nav-link">
-                            <img src="{{ asset('data/us.gif') }}" style="width: 40px;">
-                        </a>
-
-
-                        <a href="{{ route('set_jp') }}" class="nav-link">
-                            <img src="{{ asset('data/jp.jpeg') }}" style="width: 40px;">
-                        </a>
-
                         <div class="right-nav align-items-center d-flex justify-content-end">
-                            <a class="btn btn-white btn-sm" href="">Call Now</a>
-                            <div class="search">
-                            </div> <a href="#" class="ht-nav-toggle"><span></span></a>
+                            <a href="#" class="ht-nav-toggle"><span></span></a>
                         </div>
                     </nav>
                 </div>
@@ -113,11 +113,12 @@
     </div>
 </header>
 
-<nav id="ht-main-nav"> <a href="#" class="ht-nav-toggle active"><span></span></a>
+<nav id="ht-main-nav">
+    <a href="#" class="ht-nav-toggle active"><span></span></a>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <img class="img-fluid side-logo mb-3" src="{{ asset('assets/images/logo.png') }}" alt="">
+                <img class="img-fluid side-logo mb-3" src="{{ asset('data/logo.png') }}" alt="">
                 <p class="mb-5">New Golden Way Overseas Employment Agency is one of the recruitment agencies in
                     Myanmar.</p>
                 <div class="form-info">

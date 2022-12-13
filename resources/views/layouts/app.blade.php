@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<!-- Mirrored from themeht.com/loptus/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Dec 2022 06:51:06 GMT -->
-
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="agency, bootstrap 5, premium, marketing, business, digital, rtl, sass/scss/saas" />
-    <meta name="description" content="HTML5 Template" />
-    <meta name="author" content="www.themeht.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="" name="New Golden Way Agency">
+    <meta name="keywords" content="New Golden Way Agency" />
+    <meta property="og:title" content="New Golden Way Agency" />
+    <meta property="og:image" content="{{ asset('data/logo.png') }}" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="New Golden Way Agency" />
+    <link rel="icon" href="{{ asset('data/logo.png') }}" type="image/gif" sizes="20x20">
 
     <!-- Title -->
     <title>New Golden Way Agency</title>
 
     <!-- favicon icon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
-
     <!-- inject css start -->
-
     <!--== bootstrap -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-
     <!--== animate -->
     <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet" type="text/css" />
-
     <!--== fontawesome -->
     <link href="{{ asset('assets/css/fontawesome-all.css') }}" rel="stylesheet" type="text/css" />
-
     <!--== themify -->
     <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet" type="text/css" />
-
     <!--== magnific-popup -->
     <link href="{{ asset('assets/css/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
-
     <!--== owl-carousel -->
     <link href="{{ asset('assets/css/owl-carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css" />
 
@@ -66,7 +60,7 @@
 
     <div class="page-wrapper">
         @include('layouts.menu')
-       
+
         @if (URL::current() == route('welcome'))
             @include('layouts.slider')
         @endif
